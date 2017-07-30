@@ -46,6 +46,5 @@ gradle-app.setting
 hs_err_pid*
 #########################
 # java-utils ignore
-!java-utils\opencsv\src\main\*
-!java-utils\opencsv\build.gradle
-java-utils\opencsv\.gitignore
+!java-utils/opencsv/src/main/*
+!java-utils/opencsv/build.gradle
