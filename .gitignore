@@ -45,6 +45,14 @@ gradle-app.setting
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 #########################
-# java-utils ignore
-!java-utils/opencsv/src/main/*
-!java-utils/opencsv/build.gradle
+# self ignore
+*/.settings/*
+*/bin/*
+*/gradle/*
+*/.gradle/*
+*/.classpath
+*/gradlew
+*/gradlew.bat
+*/settings.gradle
+*/.project
+*/src/test/*
