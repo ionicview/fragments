@@ -1,0 +1,11 @@
+# 
+*/.settings/*
+*/bin/*
+*/gradle/*
+*/.gradle/*
+*/.classpath
+*/gradlew
+*/gradlew.bat
+*/setting.gradle
+*/.project
+*/src/test/*
