@@ -1,10 +1,2 @@
 /.gradle/
 /bin/
-.settings
-.classpath
-.project
-gradlew
-settings.gradle
-/src/test
-gradlew.bat
-gradle/wrapper/*
