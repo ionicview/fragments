@@ -11,8 +11,13 @@ public class Main {
 
 		Path path = Paths.get(rootCsvPathNm, "generic" + CsvSample.CSV);
 
-		CsvSample<?> csvSample = new CsvSample<>();
+		CsvSample<Person> csvSample = new CsvSample<>(Person.class);
+
+		// generic
 		csvSample.runGeneric().accept(path);
+
+		// generic bean
+		csvSample.runGenericBean().accept(path, new String[] { "name", "age", "sex" });
 
 	}
 
