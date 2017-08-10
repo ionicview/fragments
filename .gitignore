@@ -57,3 +57,8 @@ hs_err_pid*
 */.project
 */src/test/*
 io/*
+#######################
+#for linux parent dir or current dir
+#######################
+..
+.
