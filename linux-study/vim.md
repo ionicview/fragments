@@ -1,7 +1,9 @@
 # vim 
 
 - #### how to show lines numbers in windows side (怎样在vim中显示行数)  
-    first into cmd mode, and then input `:set nu` or `:set number`
+    first into cmd mode, and then input `:set nu` or `:set number`.
+- #### how to  hide lines numbers in windows side (怎样在vim中隐藏行数)
+    first into cmd mode and then input `:set nonumber`.
 - #### 一次可以带开很多文件
     ```
     $ls -l /usr/bin/ > ls-output.txt
