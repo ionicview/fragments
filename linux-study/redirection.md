@@ -18,56 +18,56 @@
 
 - #### eg:
   ```
-  $ ls
+  ubuntu$ ls
   testFolder
-  $ ls -l /usr/bin/ > ls-output.txt
-  $ ls
+  ubuntu$ ls -l /usr/bin/ > ls-output.txt
+  ubuntu$ ls
   ls-output.txt  testFolder
-  $ wc ls-output.txt
+  ubuntu$ wc ls-output.txt
     801  7606 51686 ls-output.txt
-  $ ls -l /usr/bin/ >> ls-output.txt
-  $ wc ls-output.txt
+  ubuntu$ ls -l /usr/bin/ >> ls-output.txt
+  ubuntu$ wc ls-output.txt
     1602  15212 103372 ls-output.txt
-  $ > ls-output.txt
-  $ wc ls-output.txt
+  ubuntu$ > ls-output.txt
+  ubuntu$ wc ls-output.txt
   0 0 0 ls-output.txt
   ```
 - #### ERROR 虽然我们已经将这些文件流的前 三个称作标准输入、输出和错误，shell 内部分别将其称为文件描述符0、1和2
   ```
-  $ ls -l /bin/usr 2> ls-error.txt
+  ubuntu$ ls -l /bin/usr 2> ls-error.txt
   ```
 - #### &> 来重定向标准输出和错误到文件 ls-output.txt
   ```
-  $ ls -l /bin/usr &> ls-output.txt
+  ubuntu$ ls -l /bin/usr &> ls-output.txt
   ```
 - #### 处理不需要的输出
   ```
-  $ ls -l /bin/usr 2> /dev/null
+  ubuntu$ ls -l /bin/usr 2> /dev/null
   ```
 - #### cat Concatenate two or more file to new file
   ```
-  $ head -10 test-0.txt test-1.txt
+  ubuntu$ head -10 test-0.txt test-1.txt
   ==> test-0.txt <==
   test 0
 
   ==> test-1.txt <==
   test 1
-  $ cat test-0.txt test-1.txt > test-2.txt | head -10 test-2.txt
+  ubuntu$ cat test-0.txt test-1.txt > test-2.txt | head -10 test-2.txt
   test 0
   test 1
   $
   ```
 - #### cat 标准输入
   ```
-  $ cat > test-3.txt
+  ubuntu$ cat > test-3.txt
   this is standard input. and then press ctrl + d to stop.
-  $ cat test-3.txt
+  ubuntu$ cat test-3.txt
   this is standard input. and then press ctrl + d to stop.
   $
   ```
 - 一直监视, 使用”-f”选项，tail 命令继续监测这个文件，当新的内容添加到文件后，它们会立即 出现在屏幕上。这会一直继续下去直到你输入 Ctrl-c
   ```
-  $ tail -f ls-output.txt
+  ubuntu$ tail -f ls-output.txt
   -rwxr-xr-x 1 root   root        5518 Feb 12  2014 xzdiff
   lrwxrwxrwx 1 root   root           6 Feb 12  2014 xzegrep -> xzgrep
   lrwxrwxrwx 1 root   root           6 Feb 12  2014 xzfgrep -> xzgrep
@@ -82,11 +82,11 @@
   ```
 - #### tee 相当于peek pip中内容然后输入到文件中，同时不影响后续的操作
   ```
-  $ ls /usr/bin | tee ls.txt | grep zip
+  ubuntu$ ls /usr/bin | tee ls.txt | grep zip
   gpg-zip
   zipdetails
-  $ ls
+  ubuntu$ ls
   ls-output.txt  ls.txt  test-0.txt  test-1.txt  test-2.txt  test-3.txt  testFolder
-  $ wc ls.txt
+  ubuntu$ wc ls.txt
    800  800
   ```
