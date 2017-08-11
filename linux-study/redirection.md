@@ -20,7 +20,7 @@
   ```
   $ ls
   testFolder
-  $ls -l /usr/bin/ > ls-output.txt
+  $ ls -l /usr/bin/ > ls-output.txt
   $ ls
   ls-output.txt  testFolder
   $ wc ls-output.txt

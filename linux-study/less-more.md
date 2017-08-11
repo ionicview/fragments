@@ -11,6 +11,8 @@
     /string :search some string  and then n next , N prev
   ```
   ```
-  $ less +/ls ls-output.txt
+  # 直接查找字符串ls
+  ubuntu$  less +/ls ls-output.txt
   ```
 # more
+- #### 常用的一个命令就是 `=` 显示当前所在行数

@@ -1,7 +1,7 @@
 # man
 - #### 操作符man 可以帮助我们查看一些cmd的manual
   ```
-  $man ls
+  ubuntu$ man ls
   ```
 - #### 在man中移动
   ```
