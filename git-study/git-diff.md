@@ -20,4 +20,6 @@
   # git diff (locate 和 HEAD)
     git diff HEAD
 
+  # git diff log-id(version) (local and log-id)
+    git diff 2267a906cc5d252a95eeecc54922f65362fd1e29
   ```
