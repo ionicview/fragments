@@ -11,7 +11,7 @@
      ctrl + j 选中当前的cmd
   2. history 10 最近十条历史记录
   eg:
-  $history 10
+  ubuntu$ history 10
     840  pwd
     841  cd ..
     842  cd test/
@@ -22,13 +22,13 @@
     847  ls -a
     848  history
     849  history 10
-  $
+  ubuntu$
   3. 特定某一条记录 !加上索引
   eg:
-  $!847
+  ubuntu$ !847
     ls -a
     .  ..  10ls-output.txt  cat-output.txt  ls-output.txt  testFolder
-  $
+  ubuntu$
   4. 使用上下键回到特定的历史cmd 之后可以使用ctrl+o 依次执行剩下的命令。
      对于重复执行有用
   ```
