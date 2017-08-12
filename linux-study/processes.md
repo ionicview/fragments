@@ -65,7 +65,7 @@
   ```
   vmstat 输出一个系统资源使用快照，包括内存，交换分区和磁盘 I/O。 为了看到连续的显示结果，则在命令名后加上延时的时间（以秒为单位）。例如，“vmstat 5”。 终止输出，按下 Ctrl-c 组合键。
   ```
-  Chinese ：<http://www.cnblogs.com/ggjucheng/archive/2012/01/05/2312625.html>
+  Chinese ：<http://www.cnblogs.com/ggjucheng/archive/2012/01/05/2312625.html>  
   japanese ：<http://piro791.blog.so-net.ne.jp/2008-10-02>
   ```
   eg ：
