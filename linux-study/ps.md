@@ -1,9 +1,7 @@
 # ps
 
 - #### 10个重要的Linux ps命令实战
- ```
- https://linux.cn/article-4743-1.html
- ```
+ <https://linux.cn/article-4743-1.html>
 - ####　最常用的命令一览
   ```
 

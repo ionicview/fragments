@@ -26,9 +26,7 @@
     ```
 
 - #### 自己常用的 详细的请参考如下链接
-  ```
-  http://billie66.github.io/TLCL/book/chap13.html
-  ```
+  <http://billie66.github.io/TLCL/book/chap13.html>
   ```
   l or 右箭头	向右移动一个字符
   h or 左箭头	向左移动一个字符
