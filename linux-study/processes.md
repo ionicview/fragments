@@ -61,10 +61,13 @@
           ├─systemd-timesyn───{sd-resolve}
           └─systemd-udevd
 
-
+  ```
+  ```
   vmstat 输出一个系统资源使用快照，包括内存，交换分区和磁盘 I/O。 为了看到连续的显示结果，则在命令名后加上延时的时间（以秒为单位）。例如，“vmstat 5”。 终止输出，按下 Ctrl-c 组合键。
+  ```
   Chinese ：<http://www.cnblogs.com/ggjucheng/archive/2012/01/05/2312625.html>
   japanese ：<http://piro791.blog.so-net.ne.jp/2008-10-02>
+  ```
   eg ：
     ubuntu$ vmstat 5 7
     procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
@@ -77,6 +80,8 @@
      0  0      0  67888  27000 210560    0    0     0     2   75  151  0  0 100  0  0
      0  0      0  67888  27004 210560    0    0     0     3   74  152  0  0 100  0  0
     ubuntu$
+  ```
+  ```
   xload	一个图形界面程序，可以画出系统负载的图形。
-  tload`	与 xload 程序相似，但是在终端中画出图形。使用 Ctrl-c，来终止输出。
+  tload	与 xload 程序相似，但是在终端中画出图形。使用 Ctrl-c，来终止输出。
   ```
