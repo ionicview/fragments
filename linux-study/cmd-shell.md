@@ -1,5 +1,16 @@
 # cmd  
 
+- #### create self shell prompt
+  ```
+  ubuntu@ip-172-xx-xx-xxx:~$ PS1_old="$PS1"
+  ubuntu@ip-172-xx-xx-xxx:~$ PS1="\u$ "
+  ubuntu$
+```
+- #### create self shell prompt
+  ```
+  ubuntu$  echo {Z..A}
+  Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+  ```
 - #### 清空屏幕
   ```
   1. clear
