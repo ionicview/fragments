@@ -94,7 +94,8 @@
         ├── file-C.txt
         └── file-D.txt
   　10 directories, 40 files
-
+  ```
+  ```
     ubuntu$ touch timestamp
     ubuntu$ stat timestamp
       File: 'timestamp'
@@ -122,7 +123,7 @@
   ```
 
   ```
-    #　执行
+    # 执行
     ubuntu$ find . -type f -newer timestamp | sort
     ./folder-01/file-D
     ./folder-02/file-D
@@ -149,60 +150,61 @@
     ./folder-10/file-D
 
     ubuntu$ find . -type d -newer timestamp -and -name "*1*" |sort
-    ./folder-01
     ./folder-10
-
   ```
 
   - 几个预定义的 find 命令操作
-  ```
-    -delete	删除当前匹配的文件。
-    -ls	  对匹配的文件执行等同的 ls -dils 命令。并将结果发送到标准输出。
-    -print	把匹配文件的全路径名输送到标准输出。如果没有指定其它操作，这是 默认操作。
-    -quit	一旦找到一个匹配，退出。`
-  ```
+    ```
+      -delete	删除当前匹配的文件。
+      -ls	  对匹配的文件执行等同的 ls -dils 命令。并将结果发送到标准输出。
+      -print	把匹配文件的全路径名输送到标准输出。如果没有指定其它操作，这是 默认操作。
+      -quit	一旦找到一个匹配，退出。`
+    ```
+
  - xargs / exec
-  ```
-    ubuntu$ find -type d -name "*1*" | xargs ls -a
-    ./folder-01:
-    .  ..  file-A.txt  file-B.txt  file-C.txt  file-D  file-D.txt
+    ```
+      ubuntu$ find -type d -name "*1*" | xargs ls -a
+      ./folder-01:
+      .  ..  file-A.txt  file-B.txt  file-C.txt  file-D  file-D.txt
 
-    ./folder-10:
-    .  ..  file-A.txt  file-B.txt  file-C.txt  file-D  file-D.txt
-    ubuntu$
-  ```
-  ```
-    # ; 代表语句完了,找到一个执行一次ls -l
-    ubuntu$ find -type d -name "*1*" -exec ls -l '{}' ';'
-    total 0
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
-    total 0
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
+      ./folder-10:
+      .  ..  file-A.txt  file-B.txt  file-C.txt  file-D  file-D.txt
+      ubuntu$
+    ```
+    ```
+      # ; 代表语句完了,找到一个执行一次ls -l
 
-    #  + 只执行一次 ls -l
-    ubuntu$ find -type d -name "*1*" -exec ls -l '{}' '+'
-    ./folder-01:
-    total 0
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
+      ubuntu$ find -type d -name "*1*" -exec ls -l '{}' ';'
+      total 0
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
+      total 0
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
 
-    ./folder-10:
-    total 0
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
-    -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
-    ubuntu$
-  ```
+      #  + 只执行一次 ls -l
+
+      ubuntu$ find -type d -name "*1*" -exec ls -l '{}' '+'
+      ./folder-01:
+      total 0
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
+
+      ./folder-10:
+      total 0
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-A.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-B.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-C.txt
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 12:00 file-D
+      -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
+      ubuntu$
+    ```
