@@ -37,131 +37,127 @@
   - -newer file 匹配的文件和目录的内容在指定的文件之后修改或者创建
 
     ###### 准备数据
-    ```
+      ```
+      ubuntu$ mkdir -p folder-{01..10}
+      ubuntu$ touch folder-{01..10}/file-{A..D}.txt
 
-    ubuntu$ mkdir -p folder-{01..10}
-    ubuntu$ touch folder-{01..10}/file-{A..D}.txt
+      ubuntu$ tree
+      .
+      ├── folder-01
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-02
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-03
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-04
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-05
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-06
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-07
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-08
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      ├── folder-09
+      │   ├── file-A.txt
+      │   ├── file-B.txt
+      │   ├── file-C.txt
+      │   └── file-D.txt
+      └── folder-10
+          ├── file-A.txt
+          ├── file-B.txt
+          ├── file-C.txt
+          └── file-D.txt
+    　10 directories, 40 files
 
-    ubuntu$ tree
-    .
-    ├── folder-01
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-02
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-03
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-04
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-05
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-06
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-07
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-08
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    ├── folder-09
-    │   ├── file-A.txt
-    │   ├── file-B.txt
-    │   ├── file-C.txt
-    │   └── file-D.txt
-    └── folder-10
-        ├── file-A.txt
-        ├── file-B.txt
-        ├── file-C.txt
-        └── file-D.txt
-  　10 directories, 40 files
+      ubuntu$ touch timestamp
+      ubuntu$ stat timestamp
+        File: 'timestamp'
+        Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+      Device: ca01h/51713d    Inode: 429060      Links: 1
+      Access: (0664/-rw-rw-r--)  Uid: ( 1000/  ubuntu)   Gid: ( 1000/  ubuntu)
+      Access: 2017-08-15 11:57:42.380585283 +0000
+      Modify: 2017-08-15 11:57:42.380585283 +0000
+      Change: 2017-08-15 11:57:42.380585283 +0000
+       Birth: -
 
-    ubuntu$ touch timestamp
-    ubuntu$ stat timestamp
-      File: 'timestamp'
-      Size: 0               Blocks: 0          IO Block: 4096   regular empty file
-    Device: ca01h/51713d    Inode: 429060      Links: 1
-    Access: (0664/-rw-rw-r--)  Uid: ( 1000/  ubuntu)   Gid: ( 1000/  ubuntu)
-    Access: 2017-08-15 11:57:42.380585283 +0000
-    Modify: 2017-08-15 11:57:42.380585283 +0000
-    Change: 2017-08-15 11:57:42.380585283 +0000
-     Birth: -
+      ubuntu$ touch timestamp
+      ubuntu$ stat timestamp
+        File: 'timestamp'
+        Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+      Device: ca01h/51713d    Inode: 429060      Links: 1
+      Access: (0664/-rw-rw-r--)  Uid: ( 1000/  ubuntu)   Gid: ( 1000/  ubuntu)
+      Access: 2017-08-15 11:58:00.628880446 +0000
+      Modify: 2017-08-15 11:58:00.628880446 +0000
+      Change: 2017-08-15 11:58:00.628880446 +0000
+       Birth: -
+      ubuntu$
 
-    ubuntu$ touch timestamp
-    ubuntu$ stat timestamp
-      File: 'timestamp'
-      Size: 0               Blocks: 0          IO Block: 4096   regular empty file
-    Device: ca01h/51713d    Inode: 429060      Links: 1
-    Access: (0664/-rw-rw-r--)  Uid: ( 1000/  ubuntu)   Gid: ( 1000/  ubuntu)
-    Access: 2017-08-15 11:58:00.628880446 +0000
-    Modify: 2017-08-15 11:58:00.628880446 +0000
-    Change: 2017-08-15 11:58:00.628880446 +0000
-     Birth: -
-    ubuntu$
-
-    ubuntu$ touch folder-{01..10}/file-D
-    ```
+      ubuntu$ touch folder-{01..10}/file-D
+      ```
 
     ###### 执行
-    ```
-    ubuntu$ find . -type f -newer timestamp | sort
-    ./folder-01/file-D
-    ./folder-02/file-D
-    ./folder-03/file-D
-    ./folder-04/file-D
-    ./folder-05/file-D
-    ./folder-06/file-D
-    ./folder-07/file-D
-    ./folder-08/file-D
-    ./folder-09/file-D
-    ./folder-10/file-D
-    ubuntu$
+      ```
+      ubuntu$ find . -type f -newer timestamp | sort
+      ./folder-01/file-D
+      ./folder-02/file-D
+      ./folder-03/file-D
+      ./folder-04/file-D
+      ./folder-05/file-D
+      ./folder-06/file-D
+      ./folder-07/file-D
+      ./folder-08/file-D
+      ./folder-09/file-D
+      ./folder-10/file-D
+      ubuntu$
 
-    ubuntu$ find . -type f -newer timestamp | sort
-    ./folder-01/file-D
-    ./folder-02/file-D
-    ./folder-03/file-D
-    ./folder-04/file-D
-    ./folder-05/file-D
-    ./folder-06/file-D
-    ./folder-07/file-D
-    ./folder-08/file-D
-    ./folder-09/file-D
-    ./folder-10/file-D
+      ubuntu$ find . -type f -newer timestamp | sort
+      ./folder-01/file-D
+      ./folder-02/file-D
+      ./folder-03/file-D
+      ./folder-04/file-D
+      ./folder-05/file-D
+      ./folder-06/file-D
+      ./folder-07/file-D
+      ./folder-08/file-D
+      ./folder-09/file-D
+      ./folder-10/file-D
 
-    ubuntu$ find . -type d -newer timestamp -and -name "*1*" |sort
-    ./folder-10
-    ```
-
+      ubuntu$ find . -type d -newer timestamp -and -name "*1*" |sort
+      ./folder-10
+      ```
   - 几个预定义的 find 命令操作
-
     ```
       -delete	删除当前匹配的文件。
       -ls	  对匹配的文件执行等同的 ls -dils 命令。并将结果发送到标准输出。
       -print	把匹配文件的全路径名输送到标准输出。如果没有指定其它操作，这是 默认操作。
       -quit	一旦找到一个匹配，退出。`
     ```
-
  - xargs / exec
     ```
       ubuntu$ find -type d -name "*1*" | xargs ls -a
@@ -190,7 +186,6 @@
       -rw-rw-r-- 1 ubuntu ubuntu 0 Aug 15 11:53 file-D.txt
 
       #  + 只执行一次 ls -l
-
       ubuntu$ find -type d -name "*1*" -exec ls -l '{}' '+'
       ./folder-01:
       total 0
