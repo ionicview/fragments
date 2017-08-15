@@ -35,8 +35,9 @@
     ubuntu$
     ```
   - -newer file 匹配的文件和目录的内容在指定的文件之后修改或者创建
+
+    ###### 准备数据
     ```
-    #　准备数据
 
     ubuntu$ mkdir -p folder-{01..10}
     ubuntu$ touch folder-{01..10}/file-{A..D}.txt
@@ -94,8 +95,7 @@
         ├── file-C.txt
         └── file-D.txt
   　10 directories, 40 files
-    ```
-    ```
+
     ubuntu$ touch timestamp
     ubuntu$ stat timestamp
       File: 'timestamp'
@@ -122,9 +122,8 @@
     ubuntu$ touch folder-{01..10}/file-D
     ```
 
+    ###### 执行
     ```
-    # 执行
-
     ubuntu$ find . -type f -newer timestamp | sort
     ./folder-01/file-D
     ./folder-02/file-D
@@ -155,7 +154,7 @@
     ```
 
   - 几个预定义的 find 命令操作
-    
+
     ```
       -delete	删除当前匹配的文件。
       -ls	  对匹配的文件执行等同的 ls -dils 命令。并将结果发送到标准输出。
