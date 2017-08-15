@@ -94,8 +94,8 @@
         ├── file-C.txt
         └── file-D.txt
   　10 directories, 40 files
-  ```
-  ```
+    ```
+    ```
     ubuntu$ touch timestamp
     ubuntu$ stat timestamp
       File: 'timestamp'
@@ -120,10 +120,11 @@
     ubuntu$
 
     ubuntu$ touch folder-{01..10}/file-D
-  ```
+    ```
 
-  ```
+    ```
     # 执行
+
     ubuntu$ find . -type f -newer timestamp | sort
     ./folder-01/file-D
     ./folder-02/file-D
@@ -151,9 +152,10 @@
 
     ubuntu$ find . -type d -newer timestamp -and -name "*1*" |sort
     ./folder-10
-  ```
+    ```
 
   - 几个预定义的 find 命令操作
+    
     ```
       -delete	删除当前匹配的文件。
       -ls	  对匹配的文件执行等同的 ls -dils 命令。并将结果发送到标准输出。
