@@ -28,3 +28,8 @@
     },
   }
 ```
+<p align="center">
+  <a href="#">
+    <img src="https://github.com/chenwb47/io/blob/master/image/jquery-string-replace.png?raw=true">
+  </a>
+</p>
