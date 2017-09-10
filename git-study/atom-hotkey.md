@@ -12,3 +12,8 @@
   2 input config and select open you config
   3 modify autoHideMenuBar : false
 ```
+
+- #### 显示tree view
+```
+  ctrl +　\
+```

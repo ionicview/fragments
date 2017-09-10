@@ -43,6 +43,7 @@
   Ctrl-b or Page Up	向上翻一页
   numberG	移动到第 number 行。例如，1G 移动到文件的第一行。
   G	移动到文件末尾。
+  u 撤销上一次操作 undo
 
   # 修改
   A 跳到行尾然后进入insert mode
