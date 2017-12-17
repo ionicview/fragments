@@ -1,8 +1,10 @@
 1
  download lombok.jar
+ 
 2
  in eclipse.ini 
  append this statment: -javaagent:lombok.jar(path of use in workspace)
+ 
 3
  restartup eclipse
 ```java
