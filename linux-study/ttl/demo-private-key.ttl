@@ -1,0 +1,32 @@
+; sample macro of Tera Term
+;
+; File: ssh2login.ttl
+; Description: auto login with SSH2 protocol
+; Environment: generic
+; Update: 2018/2/24
+; Author: chenwb47
+
+username='ubuntu'
+hostname='13.xxx.xxx.xxx'
+keyfilepath='D:/Amazon/tokyo-1GB/private-key-tokyo-1GB.ppk'
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; connect by private key;
+cmd = ''
+strconcat cmd hostname
+strconcat cmd ' /ssh /auth=publickey /user='
+strconcat cmd username
+strconcat cmd ' /keyfile='
+strconcat cmd keyfilepath
+connect cmd
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; connect by  password ;
+;strconcat Cmd Host
+;strconcat Cmd ' /ssh /1 /auth=password'
+;strconcat Cmd ' /user='
+;strconcat Cmd User1
+;strconcat Cmd ' /passwd='
+;strconcat Cmd Password1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
